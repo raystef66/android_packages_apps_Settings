@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Copyright (C) 2016 The Android Open Source Project
-
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
      You may obtain a copy of the License at
-
           http://www.apache.org/licenses/LICENSE-2.0
-
      Unless required by applicable law or agreed to in writing, software
      distributed under the License is distributed on an "AS IS" BASIS,
      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -115,6 +112,14 @@
         android:title="@string/screen_zoom_title"
         android:fragment="com.android.settings.display.ScreenZoomSettings"
         settings:searchable="false"/>
+
+    <com.crdroid.settings.preferences.SystemSettingListPreference
+        android:key="display_cutout_hidden"
+        android:title="@string/display_cutout_mode_title"
+        android:entries="@array/display_cutout_mode_entries"
+        android:entryValues="@array/display_cutout_mode_values"
+        android:defaultValue="0"
+        settings:controller="com.android.settings.display.DisplayCutoutPreferenceController" />
 
     <ListPreference
         android:key="refresh_rate_setting"
